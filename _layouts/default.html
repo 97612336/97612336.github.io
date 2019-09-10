@@ -1,48 +1,32 @@
----
-layout: compress
----
-
-<!-- Include Data Base  -->
-{% include liquid/data %}
-
-
-{% if site.maintenance.enable == true %}
-
-  {% include maintenance.html %}
-
-{% else %}
-
 <!DOCTYPE html>
 <html>
-  {% include partials/head.html %}
-<body id="top">
+  <head>
+    <title>{{ site.title }}</title>
+    {% include header.html %}
+    {% seo %}
+  </head>
+  <body>
 
-  <div class="layout_default layout_default__bg">
-
-    <div class="container layout_default__container">
-
-      <div class="row">
-
-          <div class="p-0 col-lg-3 sidebar sidebar__bg">
-
-          {% include partials/sidebar.html %}
-        </div>
-        
-          <div class="pt-4 pt-lg-0 col-lg-9 border-l-dashed border-r-dashed layout_default__content">
-
-          {{ content }}
-        </div>
-
+    {% include nav.html %}
+    <div class="container">
+      <img src="{{ site.baseurl }}/assets/img/grunge.png" alt="" class="line">
+      <p class="center author">{{ site.author }}</p>
+      <img src="{{ site.baseurl }}/assets/img/grunge.png" alt="" class="line flip">
+      <h1 class="brand title center" id="type">{{ site.title | upcase }}</h1>
+      <h5 class="center">{{ site.description | markdownify }}</h5>
+      <img src="{{ site.baseurl }}/assets/img/grunge.png" alt="" class="line tag flip">
+      <p class="right tagline">{{ site.tagline }}</p>
+      <img src="{{ site.baseurl }}/assets/img/grunge.png" alt="" class="line tag">
+      <div class="center">
+        <br>
+        <h4 class="space">{{ site.location | upcase }}</h4>
+        {% if site.date == true %}<h5>{{ site.time | date_to_long_string | upcase }}</h5>{% endif %}
+        <br>
       </div>
-
+      {% include articles.html %}
     </div>
 
+    {% include foot.html %}
 
-  </div>
-
-  {% include partials/footer.html %}
-  {% include partials/scripts/default.html %}
-</body>
+  </body>
 </html>
-
-{% endif %}
