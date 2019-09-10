@@ -1,0 +1,13 @@
+current directory: /home/wangkun/MyIdea/my-site/_gems/bundle/ruby/2.5.0/gems/json-2.2.0/ext/json
+/usr/bin/ruby2.5 -r ./siteconf20190910-361-riuw01.rb extconf.rb
+creating Makefile
+
+current directory: /home/wangkun/MyIdea/my-site/_gems/bundle/ruby/2.5.0/gems/json-2.2.0/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/wangkun/MyIdea/my-site/_gems/bundle/ruby/2.5.0/gems/json-2.2.0/ext/json
+make "DESTDIR="
+make: 对“all”无需做任何事。
+
+current directory: /home/wangkun/MyIdea/my-site/_gems/bundle/ruby/2.5.0/gems/json-2.2.0/ext/json
+make "DESTDIR=" install
