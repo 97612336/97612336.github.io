@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "main.css",
+	"file": "style.css",
 	"sources": [
-		"main.scss",
+		"style.scss",
 		"_sass/minima.scss",
 		"_sass/minima/_base.scss",
 		"_sass/minima/_layout.scss",
